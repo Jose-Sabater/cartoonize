@@ -44,7 +44,7 @@ def color_quantization(img, k):
     return result
 
 
-img = read_file("photo.png")
+img = read_file("./images/photo.png")
 edges = edge_mask(img, line_size, blur_value)
 img = color_quantization(img, total_color)
 blurred = cv2.bilateralFilter(img, d=7, sigmaColor=200, sigmaSpace=200)
