@@ -4,7 +4,7 @@ from utils.load_images_folder import load_images_from_folder
 from utils.load_2_images import display_images
 
 line_size = 7
-total_color = 9
+total_color = 6
 blur_value = 5
 images_folder = "./images"
 
@@ -150,7 +150,7 @@ inverted_Bilateral = cv2.cvtColor(inverted_bilateral, cv2.COLOR_GRAY2RGB)
 # Combine the edge image and the binned image
 cartoon_Bilateral = cv2.bitwise_and(inverted_Bilateral, less_colors_image)
 # Save the image
-cv2.imwrite("CartoonImage.png", cartoon_Bilateral)
+cv2.imwrite("./images/result/CartoonImage.png", cartoon_Bilateral)
 
 
 # edges = edge_mask(img, line_size, blur_value)
