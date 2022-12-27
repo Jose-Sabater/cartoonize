@@ -1,10 +1,10 @@
 import cv2
 import os
+import numpy as np
 
-folder = "./images/"
 
-
-def load_images_from_folder(folder):
+def load_images_from_folder(folder: str) -> "list[np.ndarray]":
+    """Loads all images in a folder"""
     images = []
     for filename in os.listdir(folder):
         img = cv2.imread(os.path.join(folder, filename))
